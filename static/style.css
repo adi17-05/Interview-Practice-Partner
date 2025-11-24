@@ -1,0 +1,388 @@
+/* Google Meet-Style Interview Room CSS - Dark Theme */
+
+:root {
+    /* Core Palette */
+    --bg-primary: #0e1117;
+    --bg-secondary: #262730;
+    --text-primary: #fafafa;
+    --text-secondary: #979797;
+    --accent-primary: #ff4b4b;
+    --accent-hover: #ff3333;
+
+    /* Meet Specifics */
+    --meet-bg: #202124;
+    --meet-surface: #3c4043;
+    --meet-border: #5f6368;
+    --meet-text: #e8eaed;
+    --meet-text-secondary: #9aa0a6;
+    --meet-accent: #8ab4f8;
+    --meet-hover: #48494b;
+}
+
+/* --- Sidebar Navigation --- */
+/* Force Sidebar Width */
+section[data-testid="stSidebar"] {
+    width: 350px !important;
+    min-width: 350px !important;
+}
+
+/* Hide default radio buttons and style labels as tabs/menu items */
+section[data-testid="stSidebar"] .stRadio>div[role="radiogroup"] {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding-top: 20px;
+}
+
+section[data-testid="stSidebar"] .stRadio>div[role="radiogroup"]>label {
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    padding: 12px 16px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    color: var(--text-secondary);
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+section[data-testid="stSidebar"] .stRadio>div[role="radiogroup"]>label:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+    color: var(--text-primary);
+    transform: translateX(4px);
+}
+
+/* Style the 'View' label of the radio widget */
+section[data-testid="stSidebar"] .stRadio>label {
+    font-size: 1.1rem !important;
+    font-weight: 600 !important;
+    color: var(--text-primary) !important;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+/* --- Main Header --- */
+.main-header {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+    background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+
+/* --- Weak Spot Column --- */
+.weak-spot-col {
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.weak-spot-col p,
+.weak-spot-col li {
+    font-size: 0.95rem !important;
+}
+
+/* --- Rubric Cards --- */
+.rubric-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.rubric-card {
+    background-color: transparent;
+    border: 1px solid var(--meet-border);
+    border-radius: 8px;
+    padding: 12px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.rubric-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    border-color: var(--meet-accent);
+}
+
+.rubric-title {
+    font-weight: 600;
+    color: var(--meet-accent);
+    margin-bottom: 4px;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.rubric-desc {
+    font-size: 0.85rem;
+    color: var(--meet-text);
+    line-height: 1.4;
+}
+
+/* --- Existing Video Grid Styles --- */
+
+/* Video Grid Container */
+.video-grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    padding: 20px;
+    background-color: var(--meet-bg);
+    border-radius: 12px;
+    margin-bottom: 20px;
+    min-height: 500px;
+}
+
+/* Individual Video Containers */
+.video-container {
+    position: relative;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px;
+}
+
+.video-container video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/* AI Interviewer Container */
+.ai-interviewer-container {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    position: relative;
+}
+
+.ai-avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 64px;
+    animation: pulse 2s ease-in-out infinite;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    }
+
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5);
+    }
+}
+
+/* Candidate Container */
+.candidate-container {
+    background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
+}
+
+.webcam-placeholder {
+    text-align: center;
+    color: var(--meet-text-secondary);
+}
+
+.webcam-placeholder svg {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 16px;
+    opacity: 0.6;
+}
+
+/* Name Labels */
+.participant-label {
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    backdrop-filter: blur(10px);
+}
+
+/* Question Overlay */
+.question-overlay {
+    background: linear-gradient(135deg, rgba(103, 126, 234, 0.95) 0%, rgba(118, 75, 162, 0.95) 100%);
+    color: white;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.question-overlay h3 {
+    margin: 0 0 10px 0;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.question-overlay p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Controls Bar */
+.controls-bar {
+    background: var(--meet-surface);
+    border-radius: 12px;
+    padding: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 -2px 12px rgba(0, 0, 0, 0.2);
+}
+
+.control-button {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: var(--meet-hover);
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+
+.control-button:hover {
+    background: var(--meet-border);
+    transform: scale(1.1);
+}
+
+.control-button.active {
+    background: var(--meet-accent);
+}
+
+.control-button.danger {
+    background: #ea4335;
+}
+
+.control-button.danger:hover {
+    background: #d33426;
+}
+
+/* Audio Player Styling */
+.audio-player-container {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 12px;
+    margin-top: 12px;
+    backdrop-filter: blur(10px);
+}
+
+/* Answer Section */
+.answer-section {
+    background: var(--meet-surface);
+    border-radius: 12px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.answer-section textarea {
+    background: var(--meet-bg);
+    color: var(--meet-text);
+    border: 1px solid var(--meet-border);
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 14px;
+    resize: vertical;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .video-grid-container {
+        grid-template-columns: 1fr;
+    }
+
+    .video-container {
+        min-height: 300px;
+    }
+}
+
+/* Streamlit Overrides */
+.stApp {
+    background-color: var(--meet-bg);
+}
+
+/* Status Indicators */
+.status-indicator {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #34a853;
+    box-shadow: 0 0 8px rgba(52, 168, 83, 0.6);
+    animation: blink 2s ease-in-out infinite;
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+}
+
+/* Speaking Animation */
+.speaking {
+    border: 3px solid var(--meet-accent);
+    animation: speaking-pulse 1s ease-in-out infinite;
+}
+
+@keyframes speaking-pulse {
+
+    0%,
+    100% {
+        border-color: var(--meet-accent);
+        box-shadow: 0 0 0 0 rgba(138, 180, 248, 0.7);
+    }
+
+    50% {
+        border-color: #669df6;
+        box-shadow: 0 0 0 8px rgba(138, 180, 248, 0);
+    }
+}
+
+/* --- Custom Input Labels --- */
+.input-label {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+    margin-top: 1.2rem;
+    letter-spacing: 0.5px;
+}

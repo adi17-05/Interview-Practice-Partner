@@ -1,0 +1,130 @@
+{
+  "user_id": "anonymous",
+  "sessions": [
+    {
+      "timestamp": "2025-11-24T02:29:51.377607Z",
+      "user_id": "anonymous",
+      "role": "Software Engineer",
+      "summary_text": "You completed a 6-question interview practice session for the Software Engineer role. Your overall performance averaged 6.0/10 across all criteria. Continue practicing to improve your interview skills, focusing on providing specific examples and structuring your answers using the STAR method (Situation, Task, Action, Result).",
+      "weak_spot_topics": [
+        "Unable to evaluate - API error"
+      ],
+      "strength_topics": [
+        "Answer recorded"
+      ],
+      "evaluations": [
+        {
+          "question": "Tell me about a time you debugged a particularly hard production issue.",
+          "answer": "Situation:\nDuring one of our deployments, we started receiving alerts that a key feature was intermittently failing in production. Users were getting random 500 errors, and the issue only happened under heavier traffic — never in staging — making it extremely difficult to reproduce.\n\nTask:\nI was responsible for diagnosing the root cause, fixing it quickly, and ensuring the system regained stability without causing downtime.\n\nAction:\nI began by checking logs, but the errors were inconsistent and gave no clear root cause. So I enabled deeper request-level logging and added temporary performance metrics to track database calls, API response times, and memory usage.\n\nFrom the patterns, I noticed the failures always occurred during simultaneous writes to the database. After running profiling on the affected service, I discovered a connection leak — one specific error path opened a DB connection but didn’t release it back to the pool.\nUnder high load, the pool ran out of available connections, causing the app to hang and throw 500 errors.",
+          "scores": {
+            "clarity": 6,
+            "technical_or_role_fit": 6,
+            "structure_STAR": 6,
+            "confidence": 6,
+            "brevity": 6
+          },
+          "weak_spots": [
+            "Unable to evaluate - API error"
+          ],
+          "strengths": [
+            "Answer recorded"
+          ],
+          "comments": "Evaluation temporarily unavailable. Your answer has been recorded."
+        },
+        {
+          "question": "Describe how you would design a rate limiter for an HTTP API.",
+          "answer": "A solid way to design a rate limiter for an HTTP API is to use a token bucket algorithm stored in Redis, since it works well across multiple servers and keeps operations atomic. Each user/IP/API key gets a “bucket” with a maximum number of tokens (e.g., 100 per minute). On every request, a small atomic script in Redis refills tokens based on time passed, then checks if at least one token is available. If yes, it consumes a token and allows the request; if not, it returns a 429 Too Many Requests response. This approach is fast, scalable, and ensures consistent rate limiting even in distributed environments.",
+          "scores": {
+            "clarity": 6,
+            "technical_or_role_fit": 6,
+            "structure_STAR": 6,
+            "confidence": 6,
+            "brevity": 6
+          },
+          "weak_spots": [
+            "Unable to evaluate - API error"
+          ],
+          "strengths": [
+            "Answer recorded"
+          ],
+          "comments": "Evaluation temporarily unavailable. Your answer has been recorded."
+        },
+        {
+          "question": "Walk me through a piece of code you wrote that you're proud of.",
+          "answer": "A piece of code I’m particularly proud of is a small but impactful optimization I built into one of our backend services. We had an API endpoint that slowed down significantly under load because it made multiple redundant database calls inside a loop. I refactored the logic by introducing a local in-memory cache for the duration of each request and batching the queries so the database was hit only once. I also rewrote the function to be more modular and added clear logging around the critical path.",
+          "scores": {
+            "clarity": 6,
+            "technical_or_role_fit": 6,
+            "structure_STAR": 6,
+            "confidence": 6,
+            "brevity": 6
+          },
+          "weak_spots": [
+            "Unable to evaluate - API error"
+          ],
+          "strengths": [
+            "Answer recorded"
+          ],
+          "comments": "Evaluation temporarily unavailable. Your answer has been recorded."
+        },
+        {
+          "question": "How do you ensure code quality and reliability in your projects?",
+          "answer": "I make code quality and reliability a priority through a combination of clean design, testing, and review processes. I start by writing clear, modular, and well-structured code following consistent patterns — this ensures readability and makes debugging much easier. I rely heavily on TypeScript for type safety, and I add automated unit tests or integration tests around any critical logic.\n\nBefore merging code, I always run it through linting, formatting, and a full CI pipeline to catch regressions early.",
+          "scores": {
+            "clarity": 6,
+            "technical_or_role_fit": 6,
+            "structure_STAR": 6,
+            "confidence": 6,
+            "brevity": 6
+          },
+          "weak_spots": [
+            "Unable to evaluate - API error"
+          ],
+          "strengths": [
+            "Answer recorded"
+          ],
+          "comments": "Evaluation temporarily unavailable. Your answer has been recorded."
+        },
+        {
+          "question": "Could you tell me more about your experience with code review processes and how you approach them?",
+          "answer": "I’ve been part of structured code review processes in most of my projects, and I see reviews as both a quality-control step and a learning opportunity. When reviewing others’ code, I focus first on correctness and potential edge cases, then on clarity, maintainability, and alignment with our standards. I avoid nitpicking and instead explain why something might cause issues or how it could be improved. I try to keep feedback constructive and specific, and I always appreciate when the author explains their reasoning — it leads to better decisions and knowledge sharing.",
+          "scores": {
+            "clarity": 6,
+            "technical_or_role_fit": 6,
+            "structure_STAR": 6,
+            "confidence": 6,
+            "brevity": 6
+          },
+          "weak_spots": [
+            "Unable to evaluate - API error"
+          ],
+          "strengths": [
+            "Answer recorded"
+          ],
+          "comments": "Evaluation temporarily unavailable. Your answer has been recorded."
+        },
+        {
+          "question": "Can you tell me more about your experience with that? Please provide specific examples.",
+          "answer": "One example that stands out is when a teammate submitted a PR that added a new API endpoint for user analytics. The code worked, but during review I noticed three potential issues:\n\nThe endpoint wasn’t handling failed Firebase reads safely — the try/catch only wrapped part of the logic.\n\nThere was duplicated logic for mapping user activity — the same block existed in two different services.\n\nThe query was inefficient, reading much more data than necessary.",
+          "scores": {
+            "clarity": 6,
+            "technical_or_role_fit": 6,
+            "structure_STAR": 6,
+            "confidence": 6,
+            "brevity": 6
+          },
+          "weak_spots": [
+            "Unable to evaluate - API error"
+          ],
+          "strengths": [
+            "Answer recorded"
+          ],
+          "comments": "Evaluation temporarily unavailable. Your answer has been recorded."
+        }
+      ]
+    }
+  ],
+  "weak_spots": {
+    "Unable to evaluate - API error": 1
+  }
+}
