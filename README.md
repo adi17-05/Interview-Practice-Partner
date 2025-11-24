@@ -1,142 +1,132 @@
 # Interview Practice Partner
 
-📄 Complete Project Description
-1. Overview
+<table>
+  <tr>
+    <th>📄 Overview</th>
+    <th>✨ What It Does</th>
+    <th>🔑 Key Features</th>
+  </tr>
+  <tr>
+    <td>
+      The AI Interview Practice Partner is an intelligent, multi-agent
+      interview preparation platform designed to transform traditional
+      Q&A practice into an adaptive, realistic, and personalized
+      experience.
+    </td>
+    <td>
+      • Simulates realistic interview sessions <br>
+      • Generates role-specific, intelligent questions <br>
+      • Performs real-time answer evaluation <br>
+      • Supports a voice-first experience <br>
+      • Provides comprehensive improvement insights
+    </td>
+    <td>
+      • 🎥 Immersive interview interface <br>
+      • 🤖 Four-Agent System (Orchestrator, Interviewer, Critic, Memory) <br>
+      • 🎯 5-Dimension evaluation system <br>
+      • 🔄 Adaptive question flow <br>
+      • 🛡️ Resilience with fallback & retry logic
+    </td>
+  </tr>
 
-The AI Interview Practice Partner is an intelligent, multi-agent interview preparation platform designed to revolutionize how users practice interviews. It transforms traditional Q&A preparation into an engaging, adaptive, and personalized experience.
+  <tr>
+    <th>🧰 Technology Stack</th>
+    <th>👥 Use Cases</th>
+    <th>⚙️ How It Works</th>
+  </tr>
+  <tr>
+    <td>
+      <b>Frontend:</b> Streamlit, HTML, CSS, JavaScript <br>
+      <b>Backend:</b> Python, Gemini API <br>
+      <b>AI:</b> Multi-agent orchestration
+    </td>
+    <td>
+      • 👨‍💼 Job seekers <br>
+      • 🎓 Students & graduates <br>
+      • 🔄 Career switchers <br>
+      • 📈 Working professionals
+    </td>
+    <td>
+      • Pre-flight setup – 30 sec <br>
+      • Interview session – 10–20 min <br>
+      • Review & feedback – 5 min
+    </td>
+  </tr>
 
-2. What It Does
+  <tr>
+    <th>🌟 What Makes It Unique</th>
+    <th>🧪 Technical Highlights</th>
+    <th>🔮 Future Vision</th>
+  </tr>
+  <tr>
+    <td>
+      • Production-ready architecture <br>
+      • Intelligent multi-agent integration <br>
+      • Resilience-first backend design <br>
+      • User-centric, interactive interface
+    </td>
+    <td>
+      • Multi-agent orchestration diagram <br>
+      • Robust fallback strategies <br>
+      • Clear data-flow design <br>
+      • Performance-focused architecture
+    </td>
+    <td>
+      • Mobile applications <br>
+      • Multi-language support <br>
+      • Advanced AI analytics <br>
+      • VR-based interview simulations
+    </td>
+  </tr>
 
-Simulates realistic interview sessions
+  <tr>
+    <th>🚀 Getting Started</th>
+    <th>📁 Project Structure</th>
+    <th>🏆 Success Stories</th>
+  </tr>
+  <tr>
+    <td>
+      • Quick setup commands <br>
+      • Link to detailed setup guide
+    </td>
+    <td>
+      • Complete directory tree <br>
+      • Description of major modules
+    </td>
+    <td>
+      • User testimonials <br>
+      • Improvements in interview readiness
+    </td>
+  </tr>
 
-Generates intelligent, role-specific questions
+</table>
 
-Performs real-time evaluation of answers
+<br>
 
-Supports a voice-first experience
+## 🎯 Key Highlights
+- ✅ Comprehensive yet compact  
+- ✅ User-friendly for all audiences  
+- ✅ Perfect for portfolio or documentation  
+- ✅ Includes features, use cases, tech, and roadmap  
+- ✅ Highly visual and easy to read  
 
-Delivers comprehensive feedback and improvement insights
-
-3. Key Features
-
-🎥 Immersive video interface for engaging interview simulations
-
-🤖 Four-agent AI system
-
-Orchestrator Agent
-
-Interviewer Agent
-
-Critic Agent
-
-Memory Agent
-
-🎯 5-dimensional evaluation system (Clarity, Technical Fit, STAR Structure, Brevity, Confidence)
-
-🔄 Adaptive learning with dynamic question flow
-
-🛡️ Built-in resilience through fallback logic and retries
-
-4. Technology Stack
-
-Frontend: Streamlit, HTML, CSS, JavaScript
-Backend: Python, Gemini API
-AI: Multi-agent architecture with orchestration
-
-5. Use Cases
-
-👨‍💼 Job seekers
-
-🎓 Students & graduates
-
-🔄 Career switchers
-
-📈 Working professionals
-
-6. How It Works
-
-Pre-flight setup – 30 seconds
-
-Interview session – 10–20 minutes
-
-Review & feedback – 5 minutes
-
-7. What Makes It Unique
-
-Production-ready architecture
-
-Intelligent multi-agent integration
-
-Resilience-first backend design
-
-User-centric, interactive interface
-
-8. Technical Highlights
-
-Detailed multi-agent orchestration diagram
-
-Robust fallback strategies
-
-Clear data flow design
-
-System performance metrics
-
-9. Future Vision
-
-Mobile applications
-
-Multi-language support
-
-Advanced AI analysis
-
-VR-based interview simulations
-
-10. Getting Started
-
-Quick setup commands
-
-Link to detailed setup guide
-
-11. Project Structure
-
-Complete directory tree
-
-Description of all major files and modules
-
-12. Success Stories
-
-User testimonials
-
-Measured improvements in interview readiness
-
-🎯 Key Highlights
-
-✅ Comprehensive: Covers everything from overview to technical depth
-
-✅ User-Friendly: Clear for both technical & non-technical readers
-
-✅ Professional: Ideal for portfolios, presentations, and documentation
-
-✅ Complete: Includes architecture, features, use cases, and roadmap
-
-✅ Visual: Supports diagrams, structure trees, and code snippets
 
 ## 📸 Overview
 
 ### Preflight view 1
-![Screenshot 1](images/Screenshot 2025-11-24 121955.png)
+![Screenshot 1](images/Screenshot%202025-11-24 121955.png)
 
 ### Preflight view 2
-![Screenshot 2](images/Screenshot 2025-11-24 122013.png)
+![Screenshot 2](images/Screenshot%202025-11-24 122013.png)
 
 ### Interview 1
-![Screenshot 3](images/Screenshot 2025-11-24 122035.png)
+![Screenshot 3](images/Screenshot%202025-11-24 122035.png)
 
 ### Interview 2
-![Screenshot 4](images/Screenshot 2025-11-24 122358.png)
+![Screenshot 4](images/Screenshot%202025-11-24 122358.png)
 
 ### Review 1
-![Screenshot 5](images/Screenshot 2025-11-24 122414.png)
+![Screenshot 5](images/Screenshot%202025-11-24 122414.png)
 
 
 
